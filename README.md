@@ -17,19 +17,22 @@ This list includes:
 To run the complete list of gtTest tests, use the following command from the gtTest directory:
 
 ```{bash}
-Rscript tests/run_tests.R
+cd tests
+Rscript run_tests.R
 ```
 
 To run tests for only a specific library, "gtBase" for example, run the following command:
 
 ```{bash}
-Rscript tests/run_tests.R "gtBase"
+cd tests
+Rscript run_tests.R "gtBase"
 ```
 
 Or to run multiple specific tests at once, use the following format:
 
 ```{bash}
-Rscript tests/run_tests.R "gtBase, gtSampling, gtTranslator"
+cd tests
+Rscript run_tests.R "gtBase, gtSampling, gtTranslator"
 ```
 
 ## Goals
