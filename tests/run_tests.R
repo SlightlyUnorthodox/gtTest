@@ -13,8 +13,8 @@ all.testable.libraries <- c(
 
 # Parse script input
 args <- commandArgs(trailingOnly = TRUE)
-if (is.na(args[1]) || nchar(as.character(args[1]))) {
-  libraries.to.test <- all.testable.libraries
+if (is.na(args[1]) || nchar(as.character(args[1])) == 0) {
+    libraries.to.test <- all.testable.libraries
 } else {
     libraries.to.test <- trimws(unlist(strsplit(args[1],",")))
 }
