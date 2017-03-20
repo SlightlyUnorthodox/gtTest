@@ -6,18 +6,20 @@ This package seeks to establish a comprehensive set of tests for the all Grokit 
 
 This list includes:
 
+* intallation/setup tests
 * gtBase/grokit
+* gtTranslator
+
+To be added in the future:
+
 * gtStats/statistics
 * gtSampling
-* gtTranslator
-* ...
 
 ## Usage
 
-To run the complete list of gtTest tests, use the following command from the gtTest directory:
+To run the complete list of available tests, use the following command from the gtTest directory:
 
 ```{bash}
-cd tests
 Rscript run_tests.R
 ```
 
