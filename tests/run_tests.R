@@ -5,6 +5,8 @@ library(RUnit)
 
 # Define testable libraries
 all.testable.libraries <- c(
+    "installation",
+    "development",
     "gtBase",
     "gtStats",
     "gtSampling",
@@ -47,7 +49,7 @@ RunTests <- function(libs = all.testable.libraries) {
     path.names <- character()
 
     for(lib in libs) {
-        path.names <- c(path.names, paste0(lib, "Tests"))   
+        path.names <- c(path.names, lib)   
     }
 
     test.suite <- defineTestSuite("Grokit Build Test", dirs = file.path(path.names), testFileRegexp = "\\.[rR]$")
