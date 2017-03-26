@@ -18,8 +18,10 @@ test.makeGLA.average <- function() {
 
     average.height <- average(test.data, inputs = Height, outputs = AVG_HEIGHT)
 
-    average.height.result <- as.numeric(as.data.frame(average.height))
+    average.height.result <- as.data.frame.data(average.height)
     
-    checkTrue(isTRUE(all.equal(mean(women$height), average.height.result, tolerance = 0.0001)) , "Mean test ran successfully")
+    check.value <- grepl(paste0("average:",as.character(mean(women$height))), as.character(average.height.result))
+
+    checkTrue(check.value , "Make GLA for average test ran successfully")
 
 }
